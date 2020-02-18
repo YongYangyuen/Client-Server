@@ -6,7 +6,7 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
+ 
 var client = new net.Socket();
 
 client.connect(PORT, HOST, function() {

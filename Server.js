@@ -26,12 +26,13 @@ net.createServer(function(sock) {
                         index = i;
                         firstTime = false;
                     }
-                }    
-                names.push(input);
-                scores.push(0);
-                index = names.length - 1;
-                firstTime = false;
-                   
+                }
+                if(firstTime) {
+                    names.push(input);
+                    scores.push(0);
+                    index = names.length - 1;
+                    firstTime = false;
+                }
             }
             sock.write("OK");
         }
